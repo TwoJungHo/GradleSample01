@@ -35,7 +35,7 @@ jobs:
         arguments: build
 
     - name: docker image build
-      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/gradleSample01 .
+      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/gradlesample01 .
 
     - name: docker login
       uses: docker/login-action@v2
@@ -44,4 +44,4 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: dockerhub push
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/gradleSample01
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/gradlesample01
